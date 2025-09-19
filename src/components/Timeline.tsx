@@ -140,13 +140,13 @@ const Timeline = () => {
           {/* Central timeline line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border rounded-full transform -translate-x-1/2 hidden md:block"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-0">
             {timelineData.map((item, index) => {
               const isLeft = index % 2 === 0;
               const colors = getTypeColor(item.type);
               
               return (
-                <div key={index} className="relative flex items-center">
+                <div key={index} className={`relative flex items-center ${index > 0 ? '-mt-32' : ''}`}>
                   {/* Timeline dot - positioned at top of post */}
                   <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block top-4`}></div>
                   
