@@ -140,18 +140,18 @@ const Timeline = () => {
           {/* Central timeline line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border rounded-full transform -translate-x-1/2 hidden md:block"></div>
 
-          <div className="space-y-12">
+          <div>
             {timelineData.map((item, index) => {
               const isLeft = index % 2 === 0;
               const colors = getTypeColor(item.type);
               
               return (
-                <div key={index} className="relative flex items-center">
-                  {/* Timeline dot - positioned at top of post */}
-                  <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block top-4`}></div>
+                <div key={index} className={`relative flex items-center ${index > 0 ? '-mt-32' : ''}`}>
+                  {/* Timeline dot - positioned in text area of previous post */}
+                  <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block ${index === 0 ? 'top-4' : 'top-60'}`}></div>
                   
-                  {/* Connecting line from post to dot - positioned at top of post */}
-                  <div className={`absolute w-6 h-0.5 bg-border z-10 hidden md:block top-4 transform -translate-y-1/2 ${
+                  {/* Connecting line from post to dot - positioned in text area */}
+                  <div className={`absolute w-6 h-0.5 bg-border z-10 hidden md:block transform -translate-y-1/2 ${index === 0 ? 'top-4' : 'top-60'} ${
                     isLeft 
                       ? 'right-1/2 mr-2' 
                       : 'left-1/2 ml-2'
