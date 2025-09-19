@@ -174,19 +174,19 @@ const Timeline = () => {
                       
                       <div className="p-6">
                         <div className="flex items-center justify-between mb-3">
-                          <span className={`text-sm font-semibold ${colors.text} uppercase tracking-wider`}>
+                          <span className={`text-sm font-medium ${colors.text} uppercase tracking-wider font-inter`}>
                             {item.type}
                           </span>
-                          <span className="text-sm font-medium text-muted-foreground">
+                          <span className="text-sm font-medium text-muted-foreground font-inter">
                             {item.year}
                           </span>
                         </div>
                         
-                        <h3 className="text-xl font-bold text-foreground mb-3 leading-tight">
+                        <h3 className="text-xl font-semibold text-foreground mb-3 leading-tight font-playfair">
                           {item.title}
                         </h3>
                         
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-4 font-inter">
                           {item.description}
                         </p>
                         
