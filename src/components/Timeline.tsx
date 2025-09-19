@@ -193,14 +193,14 @@ const Timeline = () => {
                             <Button
                               variant="outline"
                               size="sm"
-                              className="h-8 px-3 relative z-20 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                              className="h-7 px-2 text-xs relative z-20 bg-background border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                               onClick={() => {
                                 console.log("Button clicked!");
                                 window.open("https://github.com/Kristine23/Coding-Game", "_blank", "noopener,noreferrer");
                               }}
                             >
-                              <Code size={14} className="mr-1" />
-                              View Code
+                              <Code size={12} className="mr-1" />
+                              Code
                             </Button>
                           </div>
                         )}
