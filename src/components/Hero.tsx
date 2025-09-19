@@ -1,0 +1,69 @@
+import { Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="mb-8">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
+            Engineer in Robotics, Algorithms, and Mathematical Modeling
+          </h1>
+          <div className="w-24 h-1 hero-gradient mx-auto rounded-full mb-8"></div>
+        </div>
+
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
+          A curious and dedicated person with experience at the intersection of robotics, computer science, and applied mathematics. Specialized in algorithms, data structures, graph theory, and mathematical modeling — particularly within robotics and optimization problems. Experience with both theoretical analysis and practical programming. Positive, approachable, and motivated by transforming new knowledge into solutions.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <Button 
+            variant="default" 
+            size="lg" 
+            className="hero-gradient text-white border-0 hover:opacity-90 transition-opacity px-8"
+            asChild
+          >
+            <a href="mailto:contact@example.com">
+              <Mail className="mr-2 h-5 w-5" />
+              Get in Touch
+            </a>
+          </Button>
+          
+          <div className="flex gap-4">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-primary/20 hover:bg-primary/5"
+              asChild
+            >
+              <a href="https://github.com/Kristine23" target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-5 w-5" />
+                GitHub
+              </a>
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-primary/20 hover:bg-primary/5"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/kristine-vitting-klinkby-knudsen-43b329369" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="mr-2 h-5 w-5" />
+                LinkedIn
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-muted-foreground mb-4">
+            This timeline represents my introduction into AI-agent based programming. Learning and experimenting with Lovable to showcase selected projects in an interactive format.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
