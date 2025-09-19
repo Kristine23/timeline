@@ -10,7 +10,7 @@ import mathematicalModelingImage from "@/assets/mathematical-modeling.jpg";
 import publicSpeakingImage from "@/assets/public-speaking.jpg";
 import phdResearchImage from "@/assets/phd-research.jpg";
 import teachingRoboticsImage from "@/assets/teaching-robotics.jpg";
-import teachingUnderactuatedRoboticsImage from "@/assets/teaching-underactuated-robotics-focused.jpg";
+import teachingUnderactuatedRoboticsImage from "@/assets/teaching-underactuated-robotics-sharp.jpg";
 import codingGameImage from "@/assets/coding-game.jpg";
 import christmasCodingFootballGif from "@/assets/christmas-coding-football.gif";
 import networkAlgorithmsImage from "@/assets/network-algorithms.jpg";
