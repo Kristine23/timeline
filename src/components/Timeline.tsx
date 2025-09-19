@@ -189,14 +189,17 @@ const Timeline = () => {
                         
                         {/* GitHub link for Christmas coding event */}
                         {item.title === "Christmas Coding Event - 2D Podracing Game" && (
-                          <div className="mb-4">
+                          <div className="mb-4 relative z-10">
                             <Button
                               variant="outline"
                               size="sm"
-                              className="h-8 px-3"
-                              onClick={() => window.open("https://github.com/Kristine23/Coding-Game", "_blank", "noopener,noreferrer")}
+                              className="h-8 px-3 relative z-20 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                              onClick={() => {
+                                console.log("Button clicked!");
+                                window.open("https://github.com/Kristine23/Coding-Game", "_blank", "noopener,noreferrer");
+                              }}
                             >
-                              <Code size={14} />
+                              <Code size={14} className="mr-1" />
                               View Code
                             </Button>
                           </div>
