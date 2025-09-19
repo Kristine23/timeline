@@ -163,7 +163,7 @@ const Timeline = () => {
                       <div className={`absolute ${isLeft ? 'right-0' : 'left-0'} top-0 bottom-0 w-1 ${colors.bg}`}></div>
                       
                       {/* Project image/video at the top */}
-                      <div className="w-full h-48 overflow-hidden bg-muted">
+                      <div className="w-full h-64 overflow-hidden bg-muted">
                         {item.title === "Robotic Hand Object Manipulation – Planning and Control" ? (
                           <video
                             src={item.image}
@@ -172,6 +172,14 @@ const Timeline = () => {
                             loop
                             muted
                             playsInline
+                            onLoadedData={(e) => {
+                              const video = e.target as HTMLVideoElement;
+                              video.addEventListener('timeupdate', () => {
+                                if (video.currentTime >= 5) {
+                                  video.currentTime = 0;
+                                }
+                              });
+                            }}
                           />
                         ) : (
                           <img 
