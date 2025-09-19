@@ -147,11 +147,11 @@ const Timeline = () => {
               
               return (
                 <div key={index} className="relative flex items-center">
-                  {/* Timeline dot - centered */}
-                  <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 z-20 hidden md:block`}></div>
+                  {/* Timeline dot - positioned at top of post */}
+                  <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 z-20 hidden md:block top-4`}></div>
                   
-                  {/* Connecting line from post to dot */}
-                  <div className={`absolute top-1/2 w-6 h-0.5 bg-border transform -translate-y-1/2 z-10 hidden md:block ${
+                  {/* Connecting line from post to dot - positioned at top of post */}
+                  <div className={`absolute w-6 h-0.5 bg-border z-10 hidden md:block top-4 transform -translate-y-1/2 ${
                     isLeft 
                       ? 'right-1/2 mr-2' 
                       : 'left-1/2 ml-2'
