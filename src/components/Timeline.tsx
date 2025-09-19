@@ -158,7 +158,7 @@ const Timeline = () => {
                   }`}></div>
                   
                   {/* Content container */}
-                  <div className={`w-full md:w-1/2 ${isLeft ? 'md:pr-6' : 'md:pl-6 md:ml-auto'}`}>
+                  <div className={`w-full md:w-1/2 ${isLeft ? 'md:pr-8 md:mr-0' : 'md:pl-8 md:ml-auto'}`}>
                     <Card className="overflow-hidden card-shadow hover:glow-shadow transition-all duration-300 relative bg-card">
                       {/* Colored side indicator */}
                       <div className={`absolute ${isLeft ? 'right-0' : 'left-0'} top-0 bottom-0 w-1 ${colors.bg}`}></div>
