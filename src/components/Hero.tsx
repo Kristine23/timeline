@@ -15,7 +15,7 @@ const Hero = () => {
           <div className="w-24 h-1 hero-gradient mx-auto rounded-full mb-8"></div>
         </div>
 
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed text-justify">
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
           A curious and dedicated person with experience at the intersection of robotics, computer science, and applied mathematics. Specialized in algorithms, data structures, graph theory, and mathematical modeling — particularly within robotics and optimization problems. Experience with both theoretical analysis and practical programming. Positive, approachable, and motivated by transforming new knowledge into solutions.
         </p>
 
