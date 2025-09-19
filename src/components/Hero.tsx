@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <section className="flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-8 pb-12">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-4 leading-tight">
