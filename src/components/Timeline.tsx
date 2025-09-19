@@ -146,7 +146,7 @@ const Timeline = () => {
               const colors = getTypeColor(item.type);
               
               return (
-                <div key={index} className={`relative flex items-center ${index > 0 ? '-mt-32' : ''}`}>
+                <div key={index} className={`relative flex items-center ${index > 0 ? '-mt-36' : ''}`}>
                   {/* Timeline dot - positioned at top of post */}
                   <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block top-4`}></div>
                   
