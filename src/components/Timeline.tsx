@@ -10,6 +10,7 @@ import phdResearchImage from "@/assets/phd-research.jpg";
 import teachingRoboticsImage from "@/assets/teaching-robotics.jpg";
 import codingGameImage from "@/assets/coding-game.jpg";
 import networkAlgorithmsImage from "@/assets/network-algorithms.jpg";
+import networkAlgorithmsPurpleImage from "@/assets/network-algorithms-purple.jpg";
 import phdDissertationImage from "@/assets/phd-dissertation.jpg";
 
 interface TimelineItem {
@@ -80,11 +81,11 @@ const timelineData: TimelineItem[] = [
   },
   {
     year: "2022",
-    type: "Other",
+    type: "Job",
     title: "Post-doc in Computer Science",
     description: "Developed algorithms and theoretical frameworks for ensuring robust network connectivity under failures. In addition to research, taught graduate course in graph theory.",
     tags: ["SurvivableNetworkDesign", "GraphAlgorithms", "Connectivity", "CombinatorialOptimization"],
-    image: networkAlgorithmsImage
+    image: networkAlgorithmsPurpleImage
   },
   {
     year: "2021",
