@@ -11,6 +11,7 @@ import publicSpeakingImage from "@/assets/public-speaking.jpg";
 import phdResearchImage from "@/assets/phd-research.jpg";
 import teachingRoboticsImage from "@/assets/teaching-robotics.jpg";
 import teachingUnderactuatedRoboticsImage from "@/assets/teaching-underactuated-robotics.jpg";
+import teachingUnderactuatedRoboticsBlurredImage from "@/assets/teaching-underactuated-robotics-blurred.jpg";
 import codingGameImage from "@/assets/coding-game.jpg";
 import christmasCodingFootballGif from "@/assets/christmas-coding-football.gif";
 import networkAlgorithmsImage from "@/assets/network-algorithms.jpg";
@@ -73,7 +74,7 @@ const timelineData: TimelineItem[] = [
     title: "Teaching - Underactuated Robotics",
     description: "Taught undergraduate course covering control and dynamics of robots with more degrees of freedom than control inputs (e.g., drones, walking robots, ballbots). Emphasized exploiting natural dynamics, modern control strategies, and hands-on advanced control design.",
     tags: ["Teaching", "UnderactuatedRobotics", "ControlTheory", "Dynamics", "Robotics", "EngineeringEducation"],
-    image: teachingUnderactuatedRoboticsImage
+    image: teachingUnderactuatedRoboticsBlurredImage
   },
   {
     year: "2022",
