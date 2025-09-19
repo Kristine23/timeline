@@ -14,7 +14,7 @@ import phdDissertationImage from "@/assets/phd-dissertation.jpg";
 
 interface TimelineItem {
   year: string;
-  type: "Project" | "Work" | "Other";
+  type: "Project" | "Job" | "Other";
   title: string;
   description: string;
   tags: string[];
@@ -56,7 +56,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     year: "2023",
-    type: "Work",
+    type: "Job",
     title: "PhD Student in Robotics",
     description: "Conducting research in robotics with a focus on robotic manipulation, underactuated systems, and intelligent control. Developing mathematical models, implementing novel algorithms, and validating results through simulation and real-world experiments.",
     tags: ["Robotics", "AlgorithmDevelopment", "Simulation", "ExperimentalValidation", "Automation", "RobotControl"],
@@ -80,7 +80,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     year: "2022",
-    type: "Work",
+    type: "Job",
     title: "Post-doc in Computer Science",
     description: "Developed algorithms and theoretical frameworks for ensuring robust network connectivity under failures. In addition to research, taught graduate course in graph theory.",
     tags: ["SurvivableNetworkDesign", "GraphAlgorithms", "Connectivity", "CombinatorialOptimization"],
@@ -88,7 +88,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     year: "2021",
-    type: "Work",
+    type: "Job",
     title: "PhD in Computer Science",
     description: "Dissertation addressed NP-hard network design problems with real-world applications in transportation, communication, and social networks, developing methods to enable more reliable and cost-effective systems under practical constraints.",
     tags: ["NetworkDesign", "AppliedAlgorithms", "Connectivity", "Optimization", "Infrastructure", "GraphTheory", "ParameterizedComplexity"],
@@ -104,7 +104,7 @@ const getTypeColor = (type: string) => {
         text: "text-green-500",
         border: "border-green-500"
       };
-    case "Work":
+    case "Job":
       return {
         bg: "bg-blue-500", 
         text: "text-blue-500",
