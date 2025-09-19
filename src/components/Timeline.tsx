@@ -99,20 +99,36 @@ const timelineData: TimelineItem[] = [
 const getTypeColor = (type: string) => {
   switch (type) {
     case "Project":
-      return "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/30 dark:text-blue-400 dark:border-blue-800";
+      return {
+        bg: "bg-green-500",
+        text: "text-green-500",
+        border: "border-green-500"
+      };
     case "Work":
-      return "bg-green-50 text-green-700 border-green-200 dark:bg-green-950/30 dark:text-green-400 dark:border-green-800";
+      return {
+        bg: "bg-blue-500", 
+        text: "text-blue-500",
+        border: "border-blue-500"
+      };
     case "Other":
-      return "bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-950/30 dark:text-purple-400 dark:border-purple-800";
+      return {
+        bg: "bg-purple-500",
+        text: "text-purple-500", 
+        border: "border-purple-500"
+      };
     default:
-      return "bg-muted text-muted-foreground";
+      return {
+        bg: "bg-gray-500",
+        text: "text-gray-500",
+        border: "border-gray-500"
+      };
   }
 };
 
 const Timeline = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Professional Timeline
@@ -122,54 +138,59 @@ const Timeline = () => {
 
         <div className="relative">
           {/* Central timeline line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 timeline-line rounded-full transform -translate-x-1/2 hidden md:block"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border rounded-full transform -translate-x-1/2 hidden md:block"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {timelineData.map((item, index) => {
               const isLeft = index % 2 === 0;
+              const colors = getTypeColor(item.type);
               
               return (
-                <div key={index} className="relative flex items-center">
+                <div key={index} className="relative flex items-start">
                   {/* Timeline dot - centered */}
-                  <div className="absolute left-1/2 w-4 h-4 timeline-dot rounded-full border-4 border-background transform -translate-x-1/2 z-10 hidden md:block"></div>
+                  <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 z-10 hidden md:block`}></div>
                   
                   {/* Content container */}
-                  <div className={`w-full md:w-1/2 ${isLeft ? 'md:pr-8' : 'md:pl-8 md:ml-auto'}`}>
-                    <Card className={`card-shadow hover:glow-shadow transition-all duration-300 ${isLeft ? 'md:text-right' : ''}`}>
-                      <CardHeader className="pb-4">
-                        <div className={`flex flex-col sm:flex-row sm:items-center gap-2 mb-3 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
-                          <Badge variant="outline" className={getTypeColor(item.type)}>
+                  <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-8' : 'md:pl-8 md:ml-auto'}`}>
+                    <Card className="overflow-hidden card-shadow hover:glow-shadow transition-all duration-300 relative">
+                      {/* Colored side indicator */}
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${colors.bg}`}></div>
+                      
+                      {/* Project image at the top */}
+                      <div className="w-full h-48 overflow-hidden">
+                        <img 
+                          src={item.image} 
+                          alt={item.title}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                      </div>
+                      
+                      <CardHeader className="pb-3">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className={`text-sm font-medium ${colors.text}`}>
                             {item.type}
-                          </Badge>
-                          <span className="text-lg font-semibold text-primary">
+                          </span>
+                          <span className="text-sm font-medium text-muted-foreground">
                             {item.year}
                           </span>
                         </div>
-                        <CardTitle className="text-xl font-semibold leading-tight">
+                        <CardTitle className="text-lg font-semibold leading-tight">
                           {item.title}
                         </CardTitle>
                       </CardHeader>
-                      <CardContent className="space-y-4">
-                        {/* Project image */}
-                        <div className="w-full h-48 rounded-lg overflow-hidden">
-                          <img 
-                            src={item.image} 
-                            alt={item.title}
-                            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                          />
-                        </div>
-                        
-                        <CardDescription className="text-base leading-relaxed">
+                      
+                      <CardContent className="space-y-4 pt-0">
+                        <CardDescription className="text-sm leading-relaxed">
                           {item.description}
                         </CardDescription>
                         
                         {/* Tags */}
-                        <div className={`flex flex-wrap gap-2 ${isLeft ? 'md:justify-end' : 'md:justify-start'}`}>
+                        <div className="flex flex-wrap gap-1">
                           {item.tags.map((tag, tagIndex) => (
                             <Badge 
                               key={tagIndex} 
                               variant="secondary"
-                              className="text-xs bg-accent text-accent-foreground hover:bg-accent/80"
+                              className="text-xs bg-muted text-muted-foreground hover:bg-muted/80"
                             >
                               #{tag}
                             </Badge>
