@@ -190,7 +190,7 @@ const Timeline = () => {
                             <Badge 
                               key={tagIndex} 
                               variant="secondary"
-                              className="text-xs bg-muted text-muted-foreground hover:bg-muted/80 px-2 py-1"
+                              className="text-xs bg-muted text-black hover:bg-muted/80 px-2 py-1"
                             >
                               #{tag}
                             </Badge>
