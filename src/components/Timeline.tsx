@@ -11,6 +11,7 @@ import publicSpeakingImage from "@/assets/public-speaking.jpg";
 import phdResearchImage from "@/assets/phd-research.jpg";
 import teachingRoboticsImage from "@/assets/teaching-robotics.jpg";
 import codingGameImage from "@/assets/coding-game.jpg";
+import christmasCodingFootballGif from "@/assets/christmas-coding-football.gif";
 import networkAlgorithmsImage from "@/assets/network-algorithms.jpg";
 import networkAlgorithmsPurpleImage from "@/assets/network-algorithms-purple.jpg";
 import phdDissertationImage from "@/assets/phd-dissertation.jpg";
@@ -79,7 +80,7 @@ const timelineData: TimelineItem[] = [
     title: "Christmas Coding Event - 2D Podracing Game",
     description: "Organized a Christmas coding event. Developed a 2D podracing game engine where participants programmed bots to compete in algorithmic challenges. Designed as a programming competition that blended gaming with hands-on algorithmic problem-solving.",
     tags: ["SideProject", "GameDevelopment", "CodingCompetition", "AlgorithmicChallenge", "EventOrganization"],
-    image: codingGameImage
+    image: christmasCodingFootballGif
   },
   {
     year: "2022",
