@@ -1,5 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Code } from "lucide-react";
 
 // Import all project images
 import roboticHandImage from "@/assets/robotic-hand-manipulation.jpg";
@@ -184,6 +186,28 @@ const Timeline = () => {
                         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                           {item.description}
                         </p>
+                        
+                        {/* GitHub link for Christmas coding event */}
+                        {item.title === "Christmas Coding Event - 2D Podracing Game" && (
+                          <div className="mb-4">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              asChild
+                              className="h-8 px-3"
+                            >
+                              <a
+                                href="https://github.com/Kristine23/Coding-Game"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2"
+                              >
+                                <Code size={14} />
+                                View Code
+                              </a>
+                            </Button>
+                          </div>
+                        )}
                         
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2">
