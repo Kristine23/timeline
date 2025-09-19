@@ -35,7 +35,7 @@ const timelineData: TimelineItem[] = [
     type: "Project",
     title: "Statistical Modeling of Joint Configurations",
     description: "Developed statistical model to accurately describe joint configurations of the ShadowHand. Addressed discrepancies between official documentation and the real-world behavior of underactuated joints by analyzing data from the hand and capturing the kinematic relationships.",
-    tags: ["StatisticalModeling", "UnderactuatedJoints", "DataAnalysis", "Python", "MachineLearning", "Regression", "SensorData", "ParameterEstimation", "DataDriven"],
+    tags: ["StatisticalModeling", "DataAnalysis", "Python", "MachineLearning", "Regression", "SensorData", "ParameterEstimation", "DataDriven"],
     image: statisticalModelingImage
   },
   {
