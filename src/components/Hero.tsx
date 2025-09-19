@@ -50,6 +50,21 @@ const Hero = () => {
             </a>
           </Button>
         </div>
+
+        <div className="flex gap-6 justify-center items-center mt-12">
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <span className="text-sm text-muted-foreground">Project</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <span className="text-sm text-muted-foreground">Work</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+            <span className="text-sm text-muted-foreground">Other</span>
+          </div>
+        </div>
       </div>
     </section>
   );
