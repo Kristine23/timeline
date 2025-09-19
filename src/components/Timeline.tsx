@@ -193,18 +193,11 @@ const Timeline = () => {
                             <Button
                               variant="outline"
                               size="sm"
-                              asChild
                               className="h-8 px-3"
+                              onClick={() => window.open("https://github.com/Kristine23/Coding-Game", "_blank", "noopener,noreferrer")}
                             >
-                              <a
-                                href="https://github.com/Kristine23/Coding-Game"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2"
-                              >
-                                <Code size={14} />
-                                View Code
-                              </a>
+                              <Code size={14} />
+                              View Code
                             </Button>
                           </div>
                         )}
