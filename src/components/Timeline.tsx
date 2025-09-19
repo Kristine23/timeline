@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Code } from "lucide-react";
 
 // Import all project images
-import roboticHandImage from "@/assets/robotic-hand-manipulation.jpg";
+import roboticHandVideo from "@/assets/robotic-hand-manipulation.webm";
 import statisticalModelingImage from "@/assets/statistical-modeling.jpg";
 import mathematicalModelingImage from "@/assets/mathematical-modeling.jpg";
 import publicSpeakingImage from "@/assets/public-speaking.jpg";
@@ -33,7 +33,7 @@ const timelineData: TimelineItem[] = [
     title: "Robotic Hand Object Manipulation – Planning and Control",
     description: "Implemented planning and control algorithms enabling a ShadowHand with tactile sensors to grasp, move, and precisely manipulate objects. Designed multi-finger coordination based on real-time sensor feedback, achieving reliable object positioning and movement.",
     tags: ["ROS", "Docker", "Kinematics", "UnderactuatedSystems", "ShadowHand", "ObjectManipulation", "PlanningHeuristics"],
-    image: roboticHandImage
+    image: roboticHandVideo
   },
   {
     year: "2025",
@@ -162,13 +162,23 @@ const Timeline = () => {
                       {/* Colored side indicator */}
                       <div className={`absolute ${isLeft ? 'right-0' : 'left-0'} top-0 bottom-0 w-1 ${colors.bg}`}></div>
                       
-                      {/* Project image at the top */}
-                      <div className="w-full h-48 overflow-hidden bg-muted">
-                        <img 
-                          src={item.image} 
-                          alt={item.title}
-                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                        />
+                      {/* Project image/video at the top */}
+                      <div className="w-full h-64 overflow-hidden bg-muted">
+                        {item.title === "Robotic Hand Object Manipulation – Planning and Control" ? (
+                          <video 
+                            src={item.image} 
+                            autoPlay
+                            muted
+                            loop
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <img 
+                            src={item.image} 
+                            alt={item.title}
+                            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                          />
+                        )}
                       </div>
                       
                       <div className="p-6">
