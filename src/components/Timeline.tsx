@@ -151,14 +151,14 @@ const Timeline = () => {
                   <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 z-20 hidden md:block`}></div>
                   
                   {/* Connecting line from post to dot */}
-                  <div className={`absolute top-1/2 w-8 h-0.5 bg-border transform -translate-y-1/2 z-10 hidden md:block ${
+                  <div className={`absolute top-1/2 w-4 h-0.5 bg-border transform -translate-y-1/2 z-10 hidden md:block ${
                     isLeft 
                       ? 'right-1/2 mr-2' 
                       : 'left-1/2 ml-2'
                   }`}></div>
                   
                   {/* Content container */}
-                  <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-10' : 'md:pl-10 md:ml-auto'}`}>
+                  <div className={`w-full md:w-2/5 ${isLeft ? 'md:pr-6' : 'md:pl-6 md:ml-auto'}`}>
                     <Card className="overflow-hidden card-shadow hover:glow-shadow transition-all duration-300 relative bg-card">
                       {/* Colored side indicator */}
                       <div className={`absolute ${isLeft ? 'right-0' : 'left-0'} top-0 bottom-0 w-1 ${colors.bg}`}></div>
