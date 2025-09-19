@@ -128,7 +128,7 @@ const getTypeColor = (type: string) => {
 const Timeline = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Professional Timeline
@@ -140,24 +140,31 @@ const Timeline = () => {
           {/* Central timeline line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border rounded-full transform -translate-x-1/2 hidden md:block"></div>
 
-          <div className="space-y-8">
+          <div className="space-y-12">
             {timelineData.map((item, index) => {
               const isLeft = index % 2 === 0;
               const colors = getTypeColor(item.type);
               
               return (
-                <div key={index} className="relative flex items-start">
+                <div key={index} className="relative flex items-center">
                   {/* Timeline dot - centered */}
-                  <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 z-10 hidden md:block`}></div>
+                  <div className={`absolute left-1/2 w-4 h-4 ${colors.bg} rounded-full border-4 border-background transform -translate-x-1/2 z-20 hidden md:block`}></div>
+                  
+                  {/* Connecting line from post to dot */}
+                  <div className={`absolute top-1/2 w-8 h-0.5 bg-border transform -translate-y-1/2 z-10 hidden md:block ${
+                    isLeft 
+                      ? 'right-1/2 mr-2' 
+                      : 'left-1/2 ml-2'
+                  }`}></div>
                   
                   {/* Content container */}
-                  <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-8' : 'md:pl-8 md:ml-auto'}`}>
-                    <Card className="overflow-hidden card-shadow hover:glow-shadow transition-all duration-300 relative">
+                  <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-10' : 'md:pl-10 md:ml-auto'}`}>
+                    <Card className="overflow-hidden card-shadow hover:glow-shadow transition-all duration-300 relative bg-card">
                       {/* Colored side indicator */}
-                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${colors.bg}`}></div>
+                      <div className={`absolute ${isLeft ? 'right-0' : 'left-0'} top-0 bottom-0 w-1 ${colors.bg}`}></div>
                       
                       {/* Project image at the top */}
-                      <div className="w-full h-48 overflow-hidden">
+                      <div className="w-full h-48 overflow-hidden bg-muted">
                         <img 
                           src={item.image} 
                           alt={item.title}
@@ -165,38 +172,37 @@ const Timeline = () => {
                         />
                       </div>
                       
-                      <CardHeader className="pb-3">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className={`text-sm font-medium ${colors.text}`}>
+                      <div className="p-6">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className={`text-sm font-semibold ${colors.text} uppercase tracking-wider`}>
                             {item.type}
                           </span>
                           <span className="text-sm font-medium text-muted-foreground">
                             {item.year}
                           </span>
                         </div>
-                        <CardTitle className="text-lg font-semibold leading-tight">
+                        
+                        <h3 className="text-xl font-bold text-foreground mb-3 leading-tight">
                           {item.title}
-                        </CardTitle>
-                      </CardHeader>
-                      
-                      <CardContent className="space-y-4 pt-0">
-                        <CardDescription className="text-sm leading-relaxed">
+                        </h3>
+                        
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                           {item.description}
-                        </CardDescription>
+                        </p>
                         
                         {/* Tags */}
-                        <div className="flex flex-wrap gap-1">
+                        <div className="flex flex-wrap gap-2">
                           {item.tags.map((tag, tagIndex) => (
                             <Badge 
                               key={tagIndex} 
                               variant="secondary"
-                              className="text-xs bg-muted text-muted-foreground hover:bg-muted/80"
+                              className="text-xs bg-muted text-muted-foreground hover:bg-muted/80 px-2 py-1"
                             >
                               #{tag}
                             </Badge>
                           ))}
                         </div>
-                      </CardContent>
+                      </div>
                     </Card>
                   </div>
                 </div>
