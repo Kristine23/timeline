@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Code } from "lucide-react";
 
 // Import all project images
+import roboticHandImage from "@/assets/robotic-hand-manipulation.jpg";
 import roboticHandVideo from "@/assets/robotic-hand-manipulation.webm";
 import statisticalModelingImage from "@/assets/statistical-modeling.jpg";
 import mathematicalModelingImage from "@/assets/mathematical-modeling.jpg";
@@ -33,7 +34,7 @@ const timelineData: TimelineItem[] = [
     title: "Robotic Hand Object Manipulation – Planning and Control",
     description: "Implemented planning and control algorithms enabling a ShadowHand with tactile sensors to grasp, move, and precisely manipulate objects. Designed multi-finger coordination based on real-time sensor feedback, achieving reliable object positioning and movement.",
     tags: ["ROS", "Docker", "Kinematics", "UnderactuatedSystems", "ShadowHand", "ObjectManipulation", "PlanningHeuristics"],
-    image: roboticHandVideo
+    image: roboticHandImage
   },
   {
     year: "2025",
@@ -65,7 +66,7 @@ const timelineData: TimelineItem[] = [
     title: "PhD Student in Robotics",
     description: "Conducting research in robotics with a focus on robotic manipulation, underactuated systems, and intelligent control. Developing mathematical models, implementing novel algorithms, and validating results through simulation and real-world experiments.",
     tags: ["Robotics", "AlgorithmDevelopment", "Simulation", "ExperimentalValidation", "Automation", "RobotControl"],
-    image: phdResearchImage
+    image: roboticHandVideo
   },
   {
     year: "2023",
@@ -164,7 +165,7 @@ const Timeline = () => {
                       
                       {/* Project image/video at the top */}
                       <div className="w-full h-64 overflow-hidden bg-muted">
-                        {item.title === "Robotic Hand Object Manipulation – Planning and Control" ? (
+                        {item.title === "PhD Student in Robotics" ? (
                           <video 
                             src={item.image} 
                             autoPlay
