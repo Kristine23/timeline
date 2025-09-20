@@ -172,6 +172,16 @@ const Timeline = () => {
                             muted
                             loop
                             className="w-full h-full object-cover"
+                            onLoadedData={(e) => {
+                              const video = e.target as HTMLVideoElement;
+                              video.playbackRate = 0.6;
+                            }}
+                            onTimeUpdate={(e) => {
+                              const video = e.target as HTMLVideoElement;
+                              if (video.currentTime >= 3.5) {
+                                video.currentTime = 0;
+                              }
+                            }}
                           />
                         ) : (
                           <img 
