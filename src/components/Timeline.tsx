@@ -164,7 +164,10 @@ const Timeline = () => {
                       <div className={`absolute ${isLeft ? 'right-0' : 'left-0'} top-0 bottom-0 w-1 ${colors.bg}`}></div>
                       
                       {/* Project image/video at the top */}
-                      <div className="w-full h-64 overflow-hidden bg-muted">
+                      <div className={`w-full overflow-hidden bg-muted ${
+                        // Posts 1,2,3,6,8,9 get half height (h-32), others keep full height (h-64)
+                        [0,1,2,5,7,8].includes(index) ? 'h-32' : 'h-64'
+                      }`}>
                         {item.title === "PhD Student in Robotics" ? (
                           <video 
                             src={item.image} 
