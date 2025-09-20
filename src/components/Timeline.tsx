@@ -6,8 +6,8 @@ import { Code } from "lucide-react";
 // Import all project images
 import shadowRobotImage from "@/assets/shadow-robot.png";
 import roboticHandVideo from "@/assets/robotic-hand-manipulation.webm";
-import statisticalModelingImage from "@/assets/statistical-modeling.jpg";
-import mathematicalModelingImage from "@/assets/mathematical-modeling.jpg";
+import statToUseNewImage from "@/assets/stat-to-use-new.jpg";
+import contact1Image from "@/assets/contact1.jpg";
 import spotImage from "@/assets/spot.jpg";
 import phdResearchImage from "@/assets/phd-research.jpg";
 import teachingRoboticsImage from "@/assets/teaching-robotics.jpg";
@@ -42,7 +42,7 @@ const timelineData: TimelineItem[] = [
     title: "Statistical Modeling of Joint Configurations",
     description: "Developed statistical model to accurately describe joint configurations of the ShadowHand. Addressed discrepancies between official documentation and the real-world behavior of underactuated joints by analyzing data from the hand and capturing the kinematic relationships.",
     tags: ["StatisticalModeling", "DataAnalysis", "Python", "MachineLearning", "Regression", "SensorData", "ParameterEstimation", "DataDriven"],
-    image: statisticalModelingImage
+    image: statToUseNewImage
   },
   {
     year: "2024",
@@ -50,7 +50,7 @@ const timelineData: TimelineItem[] = [
     title: "Mathematical and Physical Modeling of Object–Hand Interaction",
     description: "Developed and simulated mathematical and physical models of object–hand interaction, including contact geometry, curvatures, rolling dynamics, and force constraints for realistic manipulation. Validated accuracy with numerical analysis and Mujoco simulations.",
     tags: ["Dynamics", "StabilityAnalysis", "PhysicsBasedModeling", "MathematicalModeling", "ConstraintProgramming", "NumericalAnalysis"],
-    image: mathematicalModelingImage
+    image: contact1Image
   },
   {
     year: "2023",
