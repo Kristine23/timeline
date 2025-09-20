@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Code } from "lucide-react";
 
 // Import all project images
-import shadowRobotImage from "@/assets/shadow-robot.png";
+import shadowRobotImage from "@/assets/shadow-robot1.jpg";
 import roboticHandVideo from "@/assets/robotic-hand-manipulation.webm";
 import statToUseNewImage from "@/assets/stat-to-use-new.jpg";
 import contact1Image from "@/assets/contact1.jpg";
