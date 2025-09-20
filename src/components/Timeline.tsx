@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Code } from "lucide-react";
 
 // Import all project images
-import roboticHandImage from "@/assets/robotic-hand-manipulation.jpg";
+import shadowRobotImage from "@/assets/shadow-robot.png";
 import roboticHandVideo from "@/assets/robotic-hand-manipulation.webm";
 import statisticalModelingImage from "@/assets/statistical-modeling.jpg";
 import mathematicalModelingImage from "@/assets/mathematical-modeling.jpg";
-import publicSpeakingImage from "@/assets/public-speaking.jpg";
+import spotImage from "@/assets/spot.jpg";
 import phdResearchImage from "@/assets/phd-research.jpg";
 import teachingRoboticsImage from "@/assets/teaching-robotics.jpg";
 import teachingUnderactuatedRoboticsImage from "@/assets/teaching-underactuated-robotics-focused.jpg";
@@ -34,7 +34,7 @@ const timelineData: TimelineItem[] = [
     title: "Robotic Hand Object Manipulation – Planning and Control",
     description: "Implemented planning and control algorithms enabling a ShadowHand with tactile sensors to grasp, move, and precisely manipulate objects. Designed multi-finger coordination based on real-time sensor feedback, achieving reliable object positioning and movement.",
     tags: ["ROS", "Docker", "Kinematics", "UnderactuatedSystems", "ShadowHand", "ObjectManipulation", "PlanningHeuristics"],
-    image: roboticHandImage
+    image: shadowRobotImage
   },
   {
     year: "2025",
@@ -58,7 +58,7 @@ const timelineData: TimelineItem[] = [
     title: "Public Speaking - Algorithms in Autonomous Mobile Robots",
     description: "Delivered presentation on algorithms in autonomous robots with Johan S. Laursen. Covered navigation algorithms, mapping, path planning, and obstacle avoidance. Explored what makes algorithms good or bad, and how mathematical approaches drive robotic decision-making.",
     tags: ["PublicSpeaking", "Algorithms", "Navigation", "PathPlanning", "SLAM", "Mathematics"],
-    image: publicSpeakingImage
+    image: spotImage
   },
   {
     year: "2023",
