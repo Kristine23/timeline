@@ -87,7 +87,7 @@ const timelineData: TimelineItem[] = [
   {
     year: "2022",
     type: "Job",
-    title: "Post-doc in Computer Science",
+    title: "Postdoc in Computer Science",
     description: "Developed algorithms and theoretical frameworks for ensuring robust network connectivity under failures. In addition to research, taught graduate course in graph theory.",
     tags: ["SurvivableNetworkDesign", "GraphAlgorithms", "Connectivity", "CombinatorialOptimization"],
     image: networkAlgorithmsPurpleImage
