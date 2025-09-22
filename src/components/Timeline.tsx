@@ -56,7 +56,7 @@ const timelineData: TimelineItem[] = [
     year: "2023",
     type: "Other",
     title: "Public Speaking - Algorithms in Autonomous Mobile Robots",
-    description: "Delivered presentation on algorithms in autonomous robots with Johan S. Laursen. Covered navigation algorithms, mapping, path planning, and obstacle avoidance. Explored what makes algorithms good or bad, and how mathematical approaches drive robotic decision-making.",
+    description: "Delivered presentation on algorithms in autonomous robots with Johan S. Laursen from Danish Technological Institute. Covered navigation algorithms, mapping, path planning, and obstacle avoidance. Explored what makes algorithms good or bad, and how mathematical approaches drive robotic decision-making.",
     tags: ["PublicSpeaking", "Algorithms", "Navigation", "PathPlanning", "SLAM", "Mathematics"],
     image: spotImage
   },
