@@ -18,5 +18,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: mode === 'production' ? '/professional-timeline/' : '/' // Only use base path for GitHub Pages deployment
+  base: mode === 'production' ? '/timeline/' : '/' // Only use base path for GitHub Pages deployment
 }));
