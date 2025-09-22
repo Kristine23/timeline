@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div className="text-center mb-12">
           <p className="text-sm text-muted-foreground">
-            This timeline represents my introduction into AI-agent based programming. Learning and experimenting with Lovable to showcase selected projects in an interactive format.
+            The timeline is created with AI agent-based programming. I am learning and experimenting with Lovable to showcase selected projects in an interactive format.
           </p>
         </div>
 
