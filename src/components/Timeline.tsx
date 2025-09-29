@@ -17,6 +17,7 @@ import christmasCodingFootballGif from "@/assets/christmas-coding-football.gif";
 import networkAlgorithmsImage from "@/assets/network-algorithms.jpg";
 import networkAlgorithmsPurpleImage from "@/assets/network-algorithms-purple.jpg";
 import phdDissertationImage from "@/assets/phd-dissertation.jpg";
+import hafnianComputationImage from "@/assets/hafnian-computation.jpg";
 
 interface TimelineItem {
   year: string;
@@ -28,6 +29,14 @@ interface TimelineItem {
 }
 
 const timelineData: TimelineItem[] = [
+  {
+    year: "2025",
+    type: "Project",
+    title: "Hafnian Computation Algorithm – Python Implementation",
+    description: "Developed a Python implementation with unit tests to compute the hafnian of real symmetric matrices of even size. Algorithm based on scientific paper and is featuring matrix operations and robust numerical stability.",
+    tags: ["Python", "UnitTesting", "LinearAlgebra", "Hafnian", "AlgorithmImplementation", "ComputationalMathematics"],
+    image: hafnianComputationImage
+  },
   {
     year: "2025",
     type: "Project",
