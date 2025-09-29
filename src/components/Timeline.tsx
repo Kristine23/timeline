@@ -174,8 +174,8 @@ const Timeline = () => {
                       
                       {/* Project image/video at the top */}
                       <div className={`w-full overflow-hidden bg-muted ${
-                        // Posts 1,2,3,6,8,9 get half height (h-32), others keep full height (h-64)
-                        [0,1,2,5,7,8].includes(index) ? 'h-32' : 'h-64'
+                        // Posts 0,1,2,3,6,8,9 get half height (h-32), others keep full height (h-64)
+                        [0,1,2,3,6,8,9].includes(index) ? 'h-32' : 'h-64'
                       }`}>
                         {item.title === "PhD Student in Robotics" ? (
                           <video 
