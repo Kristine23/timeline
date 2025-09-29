@@ -222,6 +222,23 @@ const Timeline = () => {
                           {item.description}
                         </p>
                         
+                        {/* GitHub link for Hafnian project */}
+                        {item.title === "Hafnian Computation Algorithm – Python Implementation" && (
+                          <div className="mb-4 relative z-10">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="h-7 px-2 text-xs relative z-20 bg-background border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                              onClick={() => {
+                                window.open("https://github.com/Kristine23/Hafnian", "_blank", "noopener,noreferrer");
+                              }}
+                            >
+                              <Code size={12} className="mr-1" />
+                              Code
+                            </Button>
+                          </div>
+                        )}
+                        
                         {/* GitHub link for Christmas coding event */}
                         {item.title === "Christmas Coding Event - 2D Podracing Game" && (
                           <div className="mb-4 relative z-10">
