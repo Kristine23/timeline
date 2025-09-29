@@ -33,7 +33,7 @@ const timelineData: TimelineItem[] = [
     year: "2025",
     type: "Project",
     title: "Hafnian Computation Algorithm – Python Implementation",
-    description: "Implemented hafnian computation based on scientific paper. Developed in Python with unit tests and numerical error estimation.",
+    description: "Implemented computation of the hafnian of real symmetric matrices of even size based on scientific paper. Developed in Python with unit tests and numerical error estimation.",
     tags: ["Python", "UnitTesting", "LinearAlgebra", "Hafnian", "AlgorithmImplementation", "ComputationalMathematics"],
     image: hafnianComputationImage
   },
